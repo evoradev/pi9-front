@@ -1,0 +1,7 @@
+{
+  "name": "pi4-front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
