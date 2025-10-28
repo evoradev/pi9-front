@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Instacam </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ng-container *ngIf="photo; else placeholder">
+      <div class="image-container">
+        <img [src]="photo.webviewPath | safeUrl" />
+        <div class="color-info" *ngIf="dominantColor">
+          <div class="color-swatch" [style.background]="dominantColor"></div>
+          <code>{{ dominantColor }}</code>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #placeholder>
+      <div class="placeholder-content">
+        <ion-icon name="image-outline"></ion-icon>
+        <span>Nenhuma foto capturada</span>
+      </div>
+    </ng-template>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="takePicture()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
