@@ -29,7 +29,6 @@
     "@capacitor/status-bar": "7.0.3",
     "@ionic/angular": "^8.7.6",
     "@ionic/pwa-elements": "^3.3.0",
-    "color-thief-ts": "^1.1.1",
     "fast-average-color": "^9.5.0",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
