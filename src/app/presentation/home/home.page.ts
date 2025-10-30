@@ -1,5 +1,6 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { IonicModule } from '@ionic/angular';
 import { Photo } from 'src/app/core/domain/photo.model';
 import { TakePictureUseCaseImpl } from 'src/app/core/usecases/take-picture.usecase';
@@ -17,7 +18,7 @@ import { DetectDominantColorUseCase } from 'src/app/core/usecases/interfaces/det
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, SafeUrlPipe],
+  imports: [IonicModule, CommonModule, SafeUrlPipe, HttpClientModule],
   providers: [
     {
       provide: TakePictureUseCase,
